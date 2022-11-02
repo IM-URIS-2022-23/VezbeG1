@@ -42,7 +42,7 @@ public class Test {
 			System.out.println("Povrsina kruga je: " + povrsinaKruga + " a obim je: "+ obimKruga);
 		}else {
 			System.out.println("Poluprecnik mora biti u rasponu od 1 do 59!");
-		}*/
+		}
 		
 		//ZADATAK 3 - VEZBE 2 od 0 do 120
 		int zbirParnih = 0;
@@ -58,7 +58,72 @@ public class Test {
 			brojac = brojac +2;
 		}
 		System.out.println(zbirParnih);
-
+		*/
+		
+		//Vezbe 3 - Zadatak 1
+		
+		/*Scanner it = new Scanner(System.in);
+		int uneseniBroj;
+		System.out.println("Unesite broj:");
+		uneseniBroj = it.nextInt();
+		
+		int brojac = 1;
+		while(brojac<=9) {
+			System.out.println(uneseniBroj*brojac);
+			brojac++;
+		}*/
+		
+		
+		//Zadatak 2
+		/*Scanner it = new Scanner(System.in);
+		int uneseniBroj;
+		System.out.println("Unesite broj:");
+		uneseniBroj = it.nextInt();
+		
+		/// 384  stotina - 3  desetica -8 jedinica - 4
+		int jedinica = uneseniBroj%10 ;
+		int desetica = (uneseniBroj%100 - jedinica)/10 ;
+		int stotina = (uneseniBroj - desetica*10 - jedinica)/100;
+		System.out.println("Prva cifra unesenog broja je: " + stotina + ", a poslednja: " + jedinica);
+		*/
+		
+		//Zadatak 3
+		System.out.println("Jaki brojevi od 0 do 200 su: ");
+		for(int i=0; i<=200; i++) {
+			int zbirFaktorijela;
+			if(i<10) {
+				zbirFaktorijela = faktorijel(i);
+				if(i == zbirFaktorijela) {
+					System.out.println(i);
+				}
+			}else {
+				if(i<100) {
+					int jedinica = i%10;
+					int desetica = (i-jedinica)/10;
+					zbirFaktorijela = faktorijel(jedinica) + faktorijel(desetica);
+					if(i == zbirFaktorijela) {
+						System.out.println(i);
+					}
+				}else {
+					int jedinica = i%10 ;
+					int desetica = (i%100 - jedinica)/10 ;
+					int stotina = (i - desetica*10 - jedinica)/100;
+					zbirFaktorijela = faktorijel(jedinica) + faktorijel(desetica) + faktorijel(stotina);
+					if(i == zbirFaktorijela) {
+						System.out.println(i);
+					}
+				}
+			}
+		}
+		
+	}
+	
+	public static int faktorijel(int broj) {
+		int rezultat = 1;
+		for(;broj>0; broj--) {
+			rezultat = rezultat * broj;
+		}
+		return rezultat;
 	}
 
 }
