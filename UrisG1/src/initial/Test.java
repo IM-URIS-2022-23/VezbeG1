@@ -88,7 +88,7 @@ public class Test {
 		*/
 		
 		//Zadatak 3
-		System.out.println("Jaki brojevi od 0 do 200 su: ");
+		/*System.out.println("Jaki brojevi od 0 do 200 su: ");
 		for(int i=0; i<=200; i++) {
 			int zbirFaktorijela;
 			if(i<10) {
@@ -123,7 +123,21 @@ public class Test {
 		for(;broj>0; broj--) {
 			rezultat = rezultat * broj;
 		}
-		return rezultat;
+		return rezultat;*/
+		
+						//VEZBE 7
+		Kljucna k1 = new Kljucna();
+		Kljucna k2 = new Kljucna();
+		for(int i=0; i<=10; i++) {
+			//Kljucna.broj = Kljucna.broj + i;
+		}
+		Kljucna.ispisiBroj();
+		
+		System.out.println(k1.broj);
+		System.out.println(k2.broj);
 	}
+		
+		
+		
 
 }
