@@ -135,9 +135,6 @@ public class Test {
 		
 		System.out.println(k1.broj);
 		System.out.println(k2.broj);
+		
+		}
 	}
-		
-		
-		
-
-}
